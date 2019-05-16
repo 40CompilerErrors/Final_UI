@@ -1,102 +1,105 @@
 {
-	"user":{
-		"name": "40CompilerErrors",
-		"picture": "images/users/40_compiler_errors.jpg"
-	},
+	
+	"users":[ 
+		{ 
+			"name": "40CompilerErrors", 
+			"picture": "images/users/40_compiler_errors.jpg"
+		} 
+	],
 
 	"characters":[
 		{
 			"group": "Dungeons and Dragons",
 			"list":[
-			{
-				"id": 1,
-				"name": "Alabaster Miller",
-				"image":"images/characters/alabaster_miller.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			}
-		],
+				{
+					"id": 1,
+					"name": "Alabaster Miller",
+					"image":"images/characters/alabaster_miller.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				}
+			]
 		},
 		{
 			"group": "Shadowrun",
 			"list":[
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-			{
-				"id": 2,
-				"name": "Example Character",
-				"image":"images/characters/example.png"
-			},
-		],
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				},
+				{
+					"id": 2,
+					"name": "Example Character",
+					"image":"images/characters/example.png"
+				}
+			]
 		},
 		{
 			"group": "Mutants and Masterminds",
-			"list":[],
+			"list":[]
 		},
 		{
 			"group": "Fragged Empire",
-			"list":[],
+			"list":[]
 		}
 	],
 
@@ -153,6 +156,6 @@
 			"name": "Downflow",
 			"image":"images/campaigns/downflow.jpg",
 			"last_played":"13/09/2015"
-		},
+		}
 	]
 }

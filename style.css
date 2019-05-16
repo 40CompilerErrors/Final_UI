@@ -1,0 +1,98 @@
+html { 
+  background: url(images/resources/background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+body{
+   min-height: 100vh;
+   height: 100%;
+   background: rgba(0,0,0,0);
+   max-width: 100vw !important;
+
+   font-family: Roboto;
+}
+
+strong{
+	font-weight: 700;
+}
+
+#content{
+	max-width: 100vw;
+	height:100%;
+}
+
+.navbar{
+	height: 10vh !important;
+}
+
+#user-image{
+	height: 8vh;
+	width: auto;
+	border-radius: 50%;
+}
+
+.navbar-nav li {
+	font-size: 1.4em;
+    display: flex;
+    align-items: center;
+}
+
+#campaign-sidebar{
+	min-height:90vh;
+	height:100%;
+	background-color: rgba(0,0,0,0.65);
+	color: rgba(255,255,255,0.87);
+
+}
+
+#campaign-sidebar h3{
+	text-align: center;
+}
+
+#campaign-insert{
+
+}
+
+.campaign-title{
+	font-size:1.2em;
+}
+
+.campaign-date{
+	font-size:0.9em;
+}
+
+.campaign-image{
+	max-width:100%;
+	height:auto;
+}
+
+#character-space{
+	height:100%;
+	color: rgba(255,255,255,0.87);
+}
+
+#character-space h3{
+
+}
+
+.group-name{
+	color: rgba(255,255,255,.95);
+}
+
+.character-image{
+	width:70%;
+	display: flex;
+    align-items: center;
+    margin-left:15%;
+}
+
+.character-name{
+	color: rgba(255,255,255,0.87);
+	text-align: center;
+	font-size:1.2em;
+	font-weight: 500;
+}
