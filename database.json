@@ -6,7 +6,8 @@
 
 
 	"characters":[
-		{
+
+		"Dungeons a"{
 			"name": "",
 			"image":""
 		},
@@ -25,32 +26,32 @@
 		{
 			"name": "Example",
 			"image":"images/campaigns/example.jpg",
-			"last_played":"Pathfinder"
+			"system":"Pathfinder"
 		},
 		{
 			"name": "Example",
 			"image":"images/campaigns/example.jpg",
-			"last_played":"Pathfinder"
+			"system":"Pathfinder"
 		},
 		{
 			"name": "Example",
 			"image":"images/campaigns/example.jpg",
-			"last_played":"Pathfinder"
+			"system":"Pathfinder"
 		},
 		{
 			"name": "Example",
 			"image":"images/campaigns/example.jpg",
-			"last_played":"Pathfinder"
+			"system":"Pathfinder"
 		},
 		{
 			"name": "Example",
 			"image":"images/campaigns/example.jpg",
-			"last_played":"Pathfinder"
+			"system":"Pathfinder"
 		},
 		{
 			"name": "Example",
 			"image":"images/campaigns/example.jpg",
-			"last_played":"Pathfinder"
+			"system":"Pathfinder"
 		}
 	],
 
