@@ -1,20 +1,103 @@
 {
 	"user":{
 		"name": "40CompilerErrors",
-		"profile": ""
+		"picture": "images/users/40_compiler_errors.jpg"
 	},
 
-
 	"characters":[
-
-		"Dungeons a"{
-			"name": "",
-			"image":""
+		{
+			"group": "Dungeons and Dragons",
+			"list":[
+			{
+				"id": 1,
+				"name": "Alabaster Miller",
+				"image":"images/characters/alabaster_miller.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			}
+		],
 		},
 		{
-			"name": "",
-			"image":""
+			"group": "Shadowrun",
+			"list":[
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+			{
+				"id": 2,
+				"name": "Example Character",
+				"image":"images/characters/example.png"
+			},
+		],
 		},
+		{
+			"group": "Mutants and Masterminds",
+			"list":[],
+		},
+		{
+			"group": "Fragged Empire",
+			"list":[],
+		}
 	],
 
 	"public_campaigns":[
@@ -57,9 +140,19 @@
 
 	"recent_campaigns":[
 		{
-			"name": "",
-			"image":"",
-			"last_played":""
+			"name": "Curse of Stradh",
+			"image": "images/campaigns/curse_of_stradh.jpg",
+			"last_played": "04/01/2019"
+		},
+		{
+			"name": "Tomb of Horrors",
+			"image": "images/campaigns/tomb_of_horrors.jpg",
+			"last_played": "21/12/2018"
+		},
+		{
+			"name": "Downflow",
+			"image":"images/campaigns/downflow.jpg",
+			"last_played":"13/09/2015"
 		},
 	]
 }
