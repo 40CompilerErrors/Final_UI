@@ -18,10 +18,40 @@
 
 	"public_campaigns":[
 		{
-			"name": "",
-			"image":"",
-			"system":""
+			"name": "Rise of the Runelords",
+			"image":"images/campaigns/rise_of_the_runelords.jpg",
+			"system":"Dungeons & Dragons (5e)"
 		},
+		{
+			"name": "Example",
+			"image":"images/campaigns/example.jpg",
+			"last_played":"Pathfinder"
+		},
+		{
+			"name": "Example",
+			"image":"images/campaigns/example.jpg",
+			"last_played":"Pathfinder"
+		},
+		{
+			"name": "Example",
+			"image":"images/campaigns/example.jpg",
+			"last_played":"Pathfinder"
+		},
+		{
+			"name": "Example",
+			"image":"images/campaigns/example.jpg",
+			"last_played":"Pathfinder"
+		},
+		{
+			"name": "Example",
+			"image":"images/campaigns/example.jpg",
+			"last_played":"Pathfinder"
+		},
+		{
+			"name": "Example",
+			"image":"images/campaigns/example.jpg",
+			"last_played":"Pathfinder"
+		}
 	],
 
 	"recent_campaigns":[
@@ -31,6 +61,4 @@
 			"last_played":""
 		},
 	]
-
-
 }
