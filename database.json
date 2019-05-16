@@ -1,0 +1,36 @@
+{
+	"user":{
+		"name": "40CompilerErrors",
+		"profile": ""
+	},
+
+
+	"characters":[
+		{
+			"name": "",
+			"image":""
+		},
+		{
+			"name": "",
+			"image":""
+		},
+	],
+
+	"public_campaigns":[
+		{
+			"name": "",
+			"image":"",
+			"system":""
+		},
+	],
+
+	"recent_campaigns":[
+		{
+			"name": "",
+			"image":"",
+			"last_played":""
+		},
+	]
+
+
+}
