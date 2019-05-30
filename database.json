@@ -168,7 +168,8 @@
 			"class": "Fighter (Level 8)",
 			"story": "TYPE HERE (HTML)",
 			"sheets":[{
-					"image": "images/characters/reference/alabaster_sheet_1.jpg"
+					"source": "images/characters/reference/alabaster_sheet_1.jpg",
+					"description": "D&D 5e (Level 8)"
 			}],
 			"campaigns":[{
 					"name": "Curse of Stradh",
