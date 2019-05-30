@@ -1,10 +1,10 @@
 {
-	
-	"users":[ 
-		{ 
-			"name": "40CompilerErrors", 
+
+	"users":[
+		{
+			"name": "40CompilerErrors",
 			"picture": "images/users/40_compiler_errors.jpg"
-		} 
+		}
 	],
 
 	"characters":[
@@ -157,5 +157,44 @@
 			"image":"images/campaigns/downflow.jpg",
 			"last_played":"13/09/2015"
 		}
-	]
+	],
+
+	"detailed_character":[
+		{
+			"name": "Alabaster Miller",
+			"token": "images/characters/alabaster_miller.png",
+			"age": "30something",
+			"species": "Human",
+			"class": "Fighter (Level 8)",
+			"story": "TYPE HERE (HTML)",
+			"sheets":[{
+					"image": "images/characters/reference/alabaster_sheet_1.jpg"
+			}],
+			"campaigns":[{
+					"name": "Curse of Stradh",
+					"image": "images/campaigns/curse_of_stradh.jpg",
+					"last_played": "04/01/2019"
+			}],
+			"images":[{
+					"source":"images/characters/reference/alabaster_1.png",
+					"description": "Portrait"
+				},
+				{
+					"source":"images/characters/reference/alabaster_2.png",
+					"description": "Appearance in a modern setting"
+				},
+				{
+					"source":"images/characters/reference/alabaster_3.jpg",
+					"description": "Looking down"
+				},
+				{
+					"source":"images/characters/reference/alabaster_4.png",
+					"description": "As a child"
+				},
+				{
+					"source":"images/characters/reference/alabaster_5.png",
+					"description": "Parenting"
+				},
+			]
+
 }
