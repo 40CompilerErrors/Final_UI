@@ -23,45 +23,9 @@
 	   			$('#user-image').attr('src',data.users[0].picture);
 	   			$('#username').text(data.users[0].name);
 
-	   			var campaigns = ``;
-
-	   			$.each(data.recent_campaigns, (key, val) => {
-    				campaigns += `<div class="row pt-2 px-3">`;
-    				campaigns += `<div class="col-1"></div>`;
-    				campaigns += `<div class="col-10">`;
-    				campaigns += `<img src="${val.image}" class="campaign-image" />`;
-    				campaigns += `<span class="campaign-title"><strong>${val.name}</strong></span></br>`;
-    				campaigns += `<span class="campaign-date">${val.last_played}</span>`;
-      				campaigns += `</div>`;
-    				campaigns += `<div class="col-1"></div>`;
-    				campaigns += `</div>`;
-				});
-
-	   			$('#campaign-insert').html(campaigns);
-
-	   			var characters = ``;
-
-	   			$.each(data.characters, (key, val) => {
-    				characters += `<div class="row pb-2">`;
-    				characters += `<h3 class="group-name"><strong>${val.group}</strong></h3>`;
-    				characters += `</div>`;
-    				characters += `<div class="row">`
-    				$.each(val.list, (i, val) => {
-    					// if (i % 6 == 0) { characters += `<div class="row px-3 pb-2">`; }
-    					characters += `<div class="col-4 col-md-2">`;
-    					characters += `<img src="${val.image}" class="character-image" />`;
-    					characters += `<p class="character-name">${val.name}</p>`;
-    					characters += `</div>`;
-    					// if (i % 6 == 5) { characters += `</div>`; }
-    				});
-    				// characters += `</div>`;
-    				characters += `</div>`;
-				});
-
-				$('#character-space').html(characters);
-
+	   		
 			});
-	  }); 
+		});
 	</script>
 
 </head>
@@ -108,14 +72,9 @@
 
 <div class="container-fluid" id="content">
 	<div class="row flex-column-reverse flex-md-row">
-		<div class="col-md-3" id="campaign-sidebar">
-			<div class="py-3">
-				<h3>Recent Campaigns</h3>
-			</div>
-			<span id="campaign-insert"></span>
-		</div>
-		<div class="col-md-9 pt-3 px-5" id="character-space">
-		</div>
+
+
+
 	</div>
 </div>
 
