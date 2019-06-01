@@ -26,7 +26,7 @@
 					console.log(data.detailed_character[0].name);
 
 					$('#character-name').text(data.detailed_character[0].name);
-					$('#character-image').attr('src',data.detailed_character[0].token);
+					$('#character-thumbnail').attr('src',data.detailed_character[0].token);
 
 					let summary = `<strong>Age:</strong> ${data.detailed_character[0].age}<br>`;
 					summary += `<strong>Species:</strong> ${data.detailed_character[0].species}<br>`;
@@ -34,6 +34,46 @@
 
 					$('#character-summary').html(summary);
 
+					let images = ``;
+					images += `<div class="row">`;
+					$.each(data.detailed_character[0].images, (key, val) => {
+							images += `<div class="col-3 pb-3">`;
+							images += `<img src="${val.source}" width="" height="" alt=""`+
+												`class="profile-image">`;
+							images +=`<h4>${val.description}</h4>`;
+							images += `</div>`;
+					});
+					images += `</div>`;
+
+					$('#images-content').html(images);
+
+					var sheet = ``;
+					sheet += `<div class="row">`;
+					$.each(data.detailed_character[0].sheets, (key, val) => {
+						sheet += `<div class="col-3 pb-3">`;
+						sheet += `<img src="${val.source}" width="" height="" alt=""`+
+											`class="profile-sheet">`;
+						sheet +=`<h4>${val.description}</h4>`;
+						sheet += `</div>`;
+					});
+					sheet += `</div>`;
+
+					$('#sheets-content').html(sheet);
+
+					var campaigns_html = ``;
+					campaigns_html += `<div class="row">`;
+					$.each(data.detailed_character[0].campaigns, (key, val) => {
+						campaigns_html += `<div class="col-3 pb-3">`;
+						campaigns_html += `<img src="${val.image}" width="" height="" alt=""`+
+										`class="profile-sheet">`;
+						campaigns_html +=`<strong class="profile-campaign-name">${val.name}</strong>`;
+						campaigns_html +=`<br>`;
+						campaigns_html +=`<span class="profile-campaign-lastplayed">${val.last_played}</span>`;
+						campaigns_html += `</div>`;
+					});
+					campaigns_html += `</div>`;
+
+					$('#campaigns-content').html(campaigns_html);
 
 			});
 		});
@@ -148,23 +188,20 @@
 			</div>
 
 			<div id="Sheets" class="tabcontent">
-				<div class="p-3">
-				  <h3>Sheets</h3>
-				  <p>Here's where the sheets go.</p>
+				<div class="p-3" id="sheets-content">
+
 				</div>
 			</div>
 
 			<div id="Images" class="tabcontent">
-				<div class="p-3">
-				  <h3>Images</h3>
-				  <p>Here's where the images go.</p>
+				<div class="p-3" id="images-content">
+
 				</div>
 			</div>
 
 			<div id="Campaigns" class="tabcontent">
-				<div class="p-3">
-					<h3>Campaigns</h3>
-					<p>Here's where the campaigns go.</p>
+				<div class="p-3" id="campaigns-content">
+
 				</div>
 			</div>
 
@@ -173,7 +210,7 @@
 			<div class="py-3">
 				<h3 id="character-name"></h3>
 				<div class="py-4">
-					<img src="" width="" height="" alt="" id="character-image">
+					<img src="" width="" height="" alt="" id="character-thumbnail">
 				</div>
 				<div class="px-3" id="character-summary"></div>
 			</div>

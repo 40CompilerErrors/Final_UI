@@ -121,7 +121,7 @@ strong{
 	text-align: center;
 }
 
-#character-image{
+#character-thumbnail{
   max-width: 70%;
   height: auto;
   margin-left: 15%;
@@ -129,6 +129,29 @@ strong{
 
 #story-title{
   text-align: center;
+}
+
+.profile-image{
+  /* width:100%;
+  object-fit: contain; */
+  object-fit: cover;
+  object-position: 100% 0;
+
+  width: 20em;
+  height: 10.8em;
+}
+
+.profile-sheet{
+  width: 100;
+  height: auto;
+}
+
+.profile-campaign-lastplayed{
+  font-size: 0.9em;
+}
+
+.profile-sheet{
+  width:100%;
 }
 
 
