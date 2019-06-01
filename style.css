@@ -96,3 +96,14 @@ strong{
 	font-size:1.2em;
 	font-weight: 500;
 }
+/* PUBLIC CAMPAIGN CSS */
+#campaign-space{
+	height:100%;
+	color: rgba(255,255,255,0.87);
+}
+.campaign-system{
+	color: rgba(255,255,255,0.87);
+	text-align: center;
+	font-size:0.6em;
+	font-weight: 500;
+}
