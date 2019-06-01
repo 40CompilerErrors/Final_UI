@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="database.json"></script>
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 
 	<script>
 		$(document).ready( ()=> {
@@ -23,9 +23,34 @@
 	   			$('#user-image').attr('src',data.users[0].picture);
 	   			$('#username').text(data.users[0].name);
 
-	   		
+					console.log(data.detailed_character[0].name);
+
+					$('#character-name').text(data.detailed_character[0].name);
+					$('#character-image').attr('src',data.detailed_character[0].token);
+
+					let summary = `<strong>Age:</strong> ${data.detailed_character[0].age}<br>`;
+					summary += `<strong>Species:</strong> ${data.detailed_character[0].species}<br>`;
+					summary += `<strong>Class:</strong> ${data.detailed_character[0].class}<br>`;
+
+					$('#character-summary').html(summary);
+
+
 			});
 		});
+
+		function openPanel(evt, panelName) {
+		  var i, tabcontent, tablinks;
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+		    tabcontent[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+		    tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+		  document.getElementById(panelName).style.display = "block";
+		  evt.currentTarget.className += " active";
+		}
 	</script>
 
 </head>
@@ -51,7 +76,7 @@
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" 
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
            aria-haspopup="true" aria-expanded="false">
           Campaigns
         </a>
@@ -74,6 +99,86 @@
 	<div class="row">
 
 
+		<div class="col-md-10 py-5 px-5" id="character-content">
+			<div class="tab">
+			  <button class="tablinks" onclick="openPanel(event, 'Story')">Story</button>
+			  <button class="tablinks" onclick="openPanel(event, 'Sheets')">Sheets</button>
+			  <button class="tablinks" onclick="openPanel(event, 'Images')">Images</button>
+				<button class="tablinks" onclick="openPanel(event, 'Campaigns')">Campaigns</button>
+			</div>
+
+			<div id="Story" class="tabcontent">
+				<div class="p-3">
+					<h2 id="story-title">Alabaster, Siege Engine</h2>
+				  <h4>Section</h4>
+				  <p>Ability modifier attack of opportunity cast a spell compulsion
+						subschool conjuration continuous damage energy charge granted power
+						kind knowledge domain lethal damage line of sight living magic domain
+						one-handed weapon paralyzed ray spell square stunned suppress telepathic
+						link total cover two-handed weapon. Aberration type armor class balance
+						domain bard caster level catching on fire charm damage reduction
+						enchantment fear effect fire domain halfling domain infection insight
+						bonus light weapon manufactured weapons planning domain protection
+						domain range increment special quality subtype suffocation sun domain
+						suppress touch attack transitive plane.
+					</p>
+					<h4>Another Section</h4>
+					<p>Ability damage archon subtype attack roll blown away calling subschool
+						deflection bonus dexterity dispel check effective character level
+						ethereal gaze hit necromancy prerequisite psionics stunned telepathy
+						trained travel domain vulnerability to energy wizard. Aberration type
+						ability damage baatezu subtype caster level comatose competence bonus
+						craft domain elemental type energy damage extraordinary ability fear
+						ray half speed hardness huge inner planes knowledge domain level loss
+						melee attack roll monk morale bonus movement modes pattern subschool
+						reach weapon resistance to energy result scrying subschool skill check
+						spell spell failure tiny.</p>
+					<p>Ability damaged animal type base attack bonus class colossal competence
+						bonus cross-class skill elemental plane fascinated fast healing good
+						subtype hit hit die hit points improved grab line of effect masterwork
+						melee weapon miss chance negative level one-handed weapon prone ranged
+						touch attack round spell domain spell failure spontaneous casting
+						suffocation use-activated item water subtype. Attack roll baatezu
+						subtype blindsense chaotic subtype drowning enemy energy drained
+						ethereal plane glamer subschool half speed hit points humanoid type
+						manufactured weapons natural protection domain ranged attack resistance
+						to energy shadow subschool shapechanger subtype spell domain undeath
+						domain.</p>
+				</div>
+			</div>
+
+			<div id="Sheets" class="tabcontent">
+				<div class="p-3">
+				  <h3>Sheets</h3>
+				  <p>Here's where the sheets go.</p>
+				</div>
+			</div>
+
+			<div id="Images" class="tabcontent">
+				<div class="p-3">
+				  <h3>Images</h3>
+				  <p>Here's where the images go.</p>
+				</div>
+			</div>
+
+			<div id="Campaigns" class="tabcontent">
+				<div class="p-3">
+					<h3>Campaigns</h3>
+					<p>Here's where the campaigns go.</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-md-2" id="character-sidebar">
+			<div class="py-3">
+				<h3 id="character-name"></h3>
+				<div class="py-4">
+					<img src="" width="" height="" alt="" id="character-image">
+				</div>
+				<div class="px-3" id="character-summary"></div>
+			</div>
+			<span id="campaign-insert"></span>
+		</div>
 
 	</div>
 </div>
