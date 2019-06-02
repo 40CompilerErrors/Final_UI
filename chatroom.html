@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Adventurer's Guild</title>
+
+
+	<script src="jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="database.json"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+	<script>
+    var tavern_messages = generateMessages(12);
+    var world_map_messages = generateMessages(24);
+    var dungeon_messages = generateMessages(3);
+    var fortress_messages = generateMessages(1);
+    var current_room = ""
+
+    $(document).ready( ()=> {
+
+      $.getJSON("database.json", (data) => {
+
+          console.log(data.users[0].name); // this will show the info it in firebug console
+          $('#user-image').attr('src',data.users[0].picture);
+          $('#username').text(data.users[0].name);
+
+
+      });
+
+
+      current_room = "tavern";
+      loadCharactersInRoom(3);
+      tavern_messages.forEach(function(message){
+        $('#chat-log').append(message);
+      });
+    });
+
+    function changeRoom(evt,name) {
+
+      var i, rooms;
+      rooms = document.getElementsByClassName("room");
+      for (i = 0; i < rooms.length; i++) {
+        rooms[i].className = rooms[i].className.replace(" active-room", "");
+      }
+      evt.currentTarget.className += " active-room";
+
+      if (name=="tavern"){
+        $('#room-name').text('Tavern');
+        $('#room-description').text('Where the party rests ' +
+          'between quests. New players are recruited ' +
+          'into the adventuring party here.');
+        current_room = "tavern";
+        loadCharactersInRoom(3);
+        $('#chat-log').html('');
+        tavern_messages.forEach(function(message){
+          $('#chat-log').append(message);
+        });
+
+      }
+      else if (name=="world-map") {
+        $('#room-name').text('World Map');
+        $('#room-description').text('For all characters' +
+          'currently traveling or in the wilderness.');
+        current_room = "world-map";
+        loadCharactersInRoom(6);
+        $('#chat-log').html('');
+        world_map_messages.forEach(function(message){
+          $('#chat-log').append(message);
+        });
+      }
+      else if (name=="dungeon") {
+        $('#room-name').text('Dungeon');
+        $('#room-description').text('Characters currently in the dungeon.');
+        current_room = "dungeon";
+        loadCharactersInRoom(2);
+        $('#chat-log').html('');
+        dungeon_messages.forEach(function(message){
+          $('#chat-log').append(message);
+        });
+      }
+      else if (name=="fortress") {
+        $('#room-name').text('Fortress');
+        $('#room-description').text('A fortress, ' +
+          'because why not?');
+        current_room = "fortress";
+        loadCharactersInRoom(0);
+        $('#chat-log').html('');
+        fortress_messages.forEach(function(message){
+          $('#chat-log').append(message);
+        });
+      }
+      updateScroll();
+    }
+
+    function loadCharactersInRoom(number){
+      let charList = ``;
+      for (i = 0; i < number; i++) {
+        charList += `<div class="row px-2 py-1">`;
+        charList += `<div class="col-4">`;
+        charList += `<img src="images/characters/example.png" alt="" class="char-image">`;
+        charList +=`</div>`;
+        charList += `<div class="col-8">`;
+        charList +=`<p class="char-name">Example Profile</p>`;
+        charList +=`</div>`;
+        charList +=`</div>`;
+      }
+
+      charList += `<div class="row px-2 py-1">`;
+      charList += `<div class="col-4">`;
+      charList += `<img src="images/characters/alabaster_miller.png" alt="" class="char-image">`;
+      charList +=`</div>`;
+      charList += `<div class="col-8">`;
+      charList +=`<p class="char-name">Alabaster Miller</p>`;
+      charList +=`</div>`;
+      charList +=`</div>`;
+
+      $('#character-list').html(charList);
+    }
+
+    function generateMessages(number){
+
+      let i;
+      let chatlog = [];
+      let message = ``;
+      for (i = 0; i < number; i++) {
+        message += `<div class="row chat-message py-2">`;
+        message += `<div class="col-1 py-2">`;
+        message += `<p class="chat-date">8/5/19</p>`;
+        message += `<p class="chat-date">10:31PM</p>`;
+        message += `</div>`;
+        message += `<div class="col-1">`;
+        message += `<img src="images/characters/example.png" alt="" class="chat-image">`;
+        message += `</div>`;
+        message += `<div class="col-1 character-name">`;
+        message += `<p>Example Character</p>`;
+        message += `</div>`;
+        message += `<div class="col-9 chat-text">`;
+        message += `<p>0-level spell action balance domain blinded charm domain class`+
+              `feature class level death attack direct a spell dispel check` +
+              `entangled failure fire domain fortitude save fraction initiative` +
+              `modifier lethal damage natural ability nonplayer character panicked` +
+              `rogue sacred bonus spell level spell preparation spell resistance` +
+              `turn undead unarmed attack. Charm class level cover elf domain` +
+              `engaged fatigued flat-footed fortitude save humanoid type melee`+
+              `attack sickened summon.</p>`;
+        message += `</div>`;
+        message += `</div>`;
+
+        chatlog[chatlog.length] = message;
+        message = ``;
+      }
+      return chatlog;
+    }
+
+    function sendMessage(){
+      var text  = $.trim($("#player-input").val());
+      $("#player-input").val("");
+
+      message = ``;
+      message += `<div class="row chat-message py-2">`;
+      message += `<div class="col-1 py-2">`;
+      message += `<p class="chat-date">8/5/19</p>`;
+      message += `<p class="chat-date">10:31PM</p>`;
+      message += `</div>`;
+      message += `<div class="col-1">`;
+      message += `<img src="images/characters/alabaster_miller.png" alt="" class="chat-image">`;
+      message += `</div>`;
+      message += `<div class="col-1 character-name">`;
+      message += `<p>Alabaster Miller</p>`;
+      message += `</div>`;
+      message += `<div class="col-9 chat-text">`;
+      message += `<p>${text}</p>`;
+      message += `</div>`;
+      message += `</div>`;
+
+      if (current_room == "tavern"){
+        tavern_messages[tavern_messages.length] = message;
+        changeRoom(event,'tavern');
+      }
+      else if(current_room == "world-map"){
+        world_map_messages[world_map_messages.length] = message;
+        changeRoom(event,'world-map');
+      }
+      else if (current_room == "dungeon"){
+        dungeon_messages[dungeon_messages.length] = message;
+        changeRoom(event,'dungeon');
+      }
+      else if (current_room == "fortress"){
+        fortress_messages[fortress_messages.length] = message;
+        changeRoom(event,'fortress');
+      }
+      updateScroll();
+    }
+
+    function updateScroll(){
+      $("#chat-log").scrollTop = $("#chat-log").scrollHeight;
+    }
+
+	</script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #261F2F;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+  	  <li class="nav-item active">
+        <a class="navbar-brand" href="#">
+    	  <img src="" width="30" height="30" alt="" id="user-image">
+  		</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span id="username"></span><span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          Campaigns
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">My Campaigns</a>
+          <a class="dropdown-item" href="campaigns.html">Search Campaigns</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Create Campaign</a>
+          <a class="dropdown-item" href="#">Join With Code</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">My Account</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid" id="content">
+	<div class="row">
+
+    <div class="col-8" style="padding:0 !important;">
+      <div class="container-fluid"  id="chat-space">
+        <div class="pl-3 row" id="room-title">
+          <h3 id="room-name">Tavern</h3>
+          <p class="pl-3" id="room-description"> Where the party rests
+            between quests. New players are recruited
+            into the adventuring party here.</p>
+        </div>
+
+        <div class="row" id="chat">
+          <div class="col-12" id="chat-log">
+
+          </div>
+        </div>
+
+
+        <div class="row" id="chat-box">
+          <div class="col-1" id="character-selector">
+            <img src="images/resources/angle-arrow-down.svg" alt="">
+          </div>
+          <div class="col-1" id="chat-character">
+            <img src="images/characters/alabaster_miller.png" alt="">
+          </div>
+          <div class="col-9">
+            <textarea id="player-input" rows="" cols=""
+                      name="new-message"></textarea>
+          </div>
+          <div class="col-1">
+            <button type="button" class="btn btn-primary center-block"
+                    onclick="sendMessage();">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-2" id="characters-in-room">
+        <h3>Chacters in Room</h3><br>
+        <div id="character-list">
+
+        </div>
+    </div>
+
+    <div class="col-2" id="rooms">
+      <h3>Rooms</h3><br>
+      <ul id="roomlist">
+         <li class="room active-room" onclick="changeRoom(event,'tavern')">Tavern</li>
+         <li class="room" onclick="changeRoom(event,'world-map')">World Map</li>
+         <li class="room" onclick="changeRoom(event,'dungeon')">Dungeon</li>
+         <li class="room" onclick="changeRoom(event,'fortress')">Fortress</li>
+      </ul>
+    </div>
+
+	</div>
+</div>
+
+</body>
+</html>
