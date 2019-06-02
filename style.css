@@ -31,7 +31,7 @@ strong{
 }
 
 .navbar{
-	height: 10vh !important;
+	height: 10% !important;
 }
 
 #user-image{
@@ -425,10 +425,21 @@ strong{
 
 .campaign-slot p{
   text-align:left;
-  padding-left:10%;
+  padding-left:5%;
   margin-bottom: 0;
+  font-size:1.0em;
+  font-weight: 500;
 }
 
 .campaign-slot{
   margin-bottom: 5vh;
+}
+
+.dropdown-menu {
+  background-color: #261F2F;
+  color: rgba(255,255,255,0.65);
+}
+
+.dropdown-menu a{
+  color: rgba(255,255,255,0.65);
 }

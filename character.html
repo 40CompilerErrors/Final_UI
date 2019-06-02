@@ -37,7 +37,7 @@
 					let images = ``;
 					images += `<div class="row">`;
 					$.each(data.detailed_character[0].images, (key, val) => {
-							images += `<div class="col-3 pb-3">`;
+							images += `<div class="col-12 col-md-3 pb-3">`;
 							images += `<img src="${val.source}" width="" height="" alt=""`+
 												`class="profile-image">`;
 							images +=`<h4>${val.description}</h4>`;
@@ -50,7 +50,7 @@
 					var sheet = ``;
 					sheet += `<div class="row">`;
 					$.each(data.detailed_character[0].sheets, (key, val) => {
-						sheet += `<div class="col-3 pb-3">`;
+						sheet += `<div class="col-12 col-md-3 pb-3">`;
 						sheet += `<img src="${val.source}" width="" height="" alt=""`+
 											`class="profile-sheet">`;
 						sheet +=`<h4>${val.description}</h4>`;
@@ -63,7 +63,7 @@
 					var campaigns_html = ``;
 					campaigns_html += `<div class="row">`;
 					$.each(data.detailed_character[0].campaigns, (key, val) => {
-						campaigns_html += `<div class="col-3 pb-3">`;
+						campaigns_html += `<div class="col-12 col-md-3 pb-3">`;
 						campaigns_html += `<img src="${val.image}" width="" height="" alt=""`+
 										`class="profile-sheet">`;
 						campaigns_html +=`<strong class="profile-campaign-name">${val.name}</strong>`;
@@ -97,10 +97,6 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #261F2F;">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
   	  <li class="nav-item active">
         <a class="navbar-brand" href="#">
@@ -132,11 +128,10 @@
         <a class="nav-link" href="#">My Account</a>
       </li>
     </ul>
-  </div>
 </nav>
 
 <div class="container-fluid" id="content">
-	<div class="row">
+	<div class="row flex-column-reverse flex-md-row">
 
 
 		<div class="col-md-10 py-5 px-5" id="character-content">
