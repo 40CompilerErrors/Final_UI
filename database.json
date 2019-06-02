@@ -1,5 +1,4 @@
 {
-
 	"users":[
 		{
 			"name": "40CompilerErrors",
@@ -92,15 +91,8 @@
 					"image":"images/characters/example.png"
 				}
 			]
-		},
-		{
-			"group": "Mutants and Masterminds",
-			"list":[]
-		},
-		{
-			"group": "Fragged Empire",
-			"list":[]
 		}
+
 	],
 
 	"roles":[
@@ -195,6 +187,20 @@
 			"image":"images/campaigns/example.jpg",
 			"system":"Pathfinder"
 		}
+	],
+
+	"my_campaigns":[
+		{
+			"name": "Curse of Stradh",
+			"image":"images/campaigns/curse_of_stradh.jpg",
+			"system":"Dungeons & Dragons (5e)"
+		},
+		{
+			"name": "Downflow",
+			"image":"images/campaigns/downflow.jpg",
+			"system":"Pathfinder"
+		},
+
 	],
 
 	"specific_campaign":[
