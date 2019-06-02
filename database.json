@@ -191,8 +191,7 @@
 			"name": "Downflow",
 			"image":"images/campaigns/downflow.jpg",
 			"system":"Pathfinder"
-		},
-
+		}
 	],
 
 	"specific_campaign":[

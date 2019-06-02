@@ -16,7 +16,12 @@ body{
    font-family: Roboto;
 }
 
+h3{
+  color: rgba(255,255,255,0.87);
+}
+
 strong{
+  color: rgba(255,255,255,0.87);
 	font-weight: 700;
 }
 
@@ -410,4 +415,20 @@ strong{
 #specifc-campaign-data p{
   margin-bottom:0;
   color: rgba(255,255,255,0.65);
+}
+
+.campaign-slot img{
+  width: 90%;
+  padding-left:5%;
+
+}
+
+.campaign-slot p{
+  text-align:left;
+  padding-left:10%;
+  margin-bottom: 0;
+}
+
+.campaign-slot{
+  margin-bottom: 5vh;
 }
