@@ -103,6 +103,62 @@
 		}
 	],
 
+	"roles":[
+		{
+			"group": "GameMasters",
+			"list":[
+				{
+					"id": 1,
+					"name": "ExampleGM",
+					"image":"images/roles/ExampleGM.jpeg"
+				},
+				{
+					"id": 2,
+					"name": "ExampleGM",
+					"image":"images/roles/ExampleGM.jpeg"
+				}
+			]
+		},
+		{
+			"group": "Players",
+			"list":[
+				{
+					"id": 2,
+					"name": "Example player",
+					"image":"images/roles/Exampleplayer.jpeg"
+				},
+				{
+					"id": 2,
+					"name": "Example player",
+					"image":"images/roles/Exampleplayer.jpeg"
+				},
+				{
+					"id": 2,
+					"name": "Example player",
+					"image":"images/roles/Exampleplayer.jpeg"
+				},
+				{
+					"id": 2,
+					"name": "Example player",
+					"image":"images/roles/Exampleplayer.jpeg"
+				},
+				{
+					"id": 2,
+					"name": "Example player",
+					"image":"images/roles/Exampleplayer.jpeg"
+				}
+			]
+		},
+		{
+			"group": "Mutants and Masterminds",
+			"list":[]
+		},
+		{
+			"group": "Fragged Empire",
+			"list":[]
+		}
+	],
+
 	"public_campaigns":[
 		{
 			"name": "Rise of the Runelords",
@@ -139,6 +195,19 @@
 			"image":"images/campaigns/example.jpg",
 			"system":"Pathfinder"
 		}
+	],
+
+	"specific_campaign":[
+		{
+			"name": "Rise of the Runelords",
+			"image": "images/campaigns/rise_of_the_runelords.jpg",
+			"last_played": "Last session on 04/01/2019",
+			"edition": "Dungeons & Dragons (5th edition",
+			"timetable": "Sundays at 7:00 PM (EST)",
+			"description": "From the idyllically peaceful coastal town of Sandpoint to an ancient lost city at the top of the world, Rise of the Runerlords takes a party of adveturers from 1st to over 15th level and delves into the mysteries of Varisia's ancient past. Millennia ago, the powerful empire of Thassilon ruled the land, dominated by despotic Runerlords who maintained their power through harnessing the power of the rune magic. Thought gone forever, the working of Thassilon are not so far beneath the sufrace and one of the Runelords plans a return to the power. Only the brave adveturers stand in his way."
+
+		}
+
 	],
 
 	"recent_campaigns":[
