@@ -49,7 +49,12 @@
     				$.each(val.list, (i, val) => {
     					// if (i % 6 == 0) { characters += `<div class="row px-3 pb-2">`; }
     					characters += `<div class="col-4 col-md-2">`;
-    					characters += `<img src="${val.image}" class="character-image" />`;
+							if(val.name =="Alabaster Miller"){
+								characters += `<a href="character.html"><img src="${val.image}" class="character-image" /></a>`;
+							}
+							else{
+								characters += `<img src="${val.image}" class="character-image" />`;
+							}
     					characters += `<p class="character-name">${val.name}</p>`;
     					characters += `</div>`;
     					// if (i % 6 == 5) { characters += `</div>`; }
@@ -84,7 +89,7 @@
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
