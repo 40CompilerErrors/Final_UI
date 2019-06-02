@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="database.json"></script>
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 
 	<script>
     $(document).ready( ()=> {
@@ -26,14 +26,14 @@
             var characters = ``;
 
           $.each(data.roles, (key, val) => {
-            characters += `<div class="row pb-2">`;
-            characters += `<h3 class="group-name"><strong>${val.group}</strong></h3>`;
-            characters += `</div>`;
+            // characters += `<div class="row pb-2">`;
+            characters += `<h3 class="group-name pt-2"><strong>${val.group}</strong></h3>`;
+            // characters += `</div>`;
             characters += `<div class="row">`
             $.each(val.list, (i, val) => {
 
-              characters += `<div class="col-5 col-md-2 pr-8 pl-4">`;
-              characters += `<img src="${val.image}" width="350%" height="auto" />`;
+              characters += `<div class="col-4">`;
+              characters += `<img src="${val.image}" class="character-image" />`;
               characters += `<p class="character-name">${val.name}</p>`;
               characters += `</div>`;
 
@@ -43,9 +43,16 @@
 
         });
 
+				//spacer
+				characters += `<div class="col-12" style="height:100%; min-height:5em;" />`;
+				characters += `<div class="col-12 text-right">`;
+				characters += `<a href="chatroom.html" role="button" class="btn btn-primary" `;
+				characters += `aria-disabled="true">Join</button>`;
+			  characters += `</div>`;
+				//
+				// <button type="button" class="btn btn-primary center-block"
+				// 				onclick="sendMessage();">Send</button>
         $('#player-menu-space').html(characters);
-
-
 
     });
     });
@@ -55,7 +62,9 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #261F2F;">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+					ata-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+					aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -74,7 +83,7 @@
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" 
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
            aria-haspopup="true" aria-expanded="false">
           Campaigns
         </a>
@@ -98,26 +107,28 @@
     <div class="col-md-9 pt-3 px-5" id="campaign-space">
       <div class="container-fluid">
       <div class="row flex-column-reverse flex-md-row">
-          <div class="col-md-7 pt-3 px-5">
+          <div class="col-md-7 pt-3 px-5" id="specifc-campaign-data">
             <h3>Rise of the runelords</h3>
             <img src="images/campaigns/rise_of_the_runelords.jpg" height="auto" width="100%" id="campimage">
-            <dir>Dungeons & Dragons (5th edition)</dir>
-            <dir>Sundays at 7:00 PM (EST)</dir>
-            <dir>Last session on 19/4/2019</dir>
+            <p>Dungeons & Dragons (5th edition)</p>
+            <p>Sundays at 7:00 PM (EST)</p>
+            <p>Last session on 19/4/2019</p>
           </div>
           <div class="col-md-5 pt-3  py-5">
+						<p id="specific-campaign-description">
             From the idyllically peaceful coastal town of Sandpoint to an ancient lost city at the top of the world, Rise of the Runerlords takes a party of adveturers from 1st to over 15th level and delves into the mysteries of Varisia's ancient past. Millennia ago, the powerful empire of Thassilon ruled the land, dominated by despotic Runerlords who maintained their power through harnessing the power of the rune magic. Thought gone forever, the working of Thassilon are not so far beneath the sufrace and one of the Runelords plans a return to the power. Only the brave adveturers stand in his way.
+						</p>
           </div>
       </div>
       </div>
     </div>
     <div class="col-md-3" id="campaign-sidebar">
-       <span class="container row" id="player-menu-space">
-         
-       </span>
-    </div>            
+       <div class="row px-3 py-2" id="player-menu-space">
 
-      
+       </div>
+    </div>
+
+
     </div>
 </div>
 
