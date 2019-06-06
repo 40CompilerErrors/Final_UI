@@ -28,20 +28,20 @@
 					$('#character-name').text(data.detailed_character[0].name);
 					$('#character-thumbnail').attr('src',data.detailed_character[0].token);
 
-					let summary = `<strong>Age:</strong> ${data.detailed_character[0].age}<br>`;
-					summary += `<strong>Species:</strong> ${data.detailed_character[0].species}<br>`;
-					summary += `<strong>Class:</strong> ${data.detailed_character[0].class}<br>`;
+					let summary = `<div><strong>Age:</strong> ${data.detailed_character[0].age}</div>`;
+					summary += `<div><strong>Species:</strong> ${data.detailed_character[0].species}</div>`;
+					summary += `<div><strong>Class:</strong> ${data.detailed_character[0].class}</div>`;
 
 					$('#character-summary').html(summary);
 
 					let images = ``;
-					images += `<div class="row">`;
+					images += `<div class="image-container">`;
 					$.each(data.detailed_character[0].images, (key, val) => {
-							images += `<div class="col-12 col-md-3 pb-3">`;
+							images += `<span class="m-3" style="text-align:center;">`;
 							images += `<img src="${val.source}" width="" height="" alt=""`+
 												`class="profile-image">`;
 							images +=`<h4>${val.description}</h4>`;
-							images += `</div>`;
+							images += `</span>`;
 					});
 					images += `</div>`;
 
@@ -64,8 +64,9 @@
 					campaigns_html += `<div class="row">`;
 					$.each(data.detailed_character[0].campaigns, (key, val) => {
 						campaigns_html += `<div class="col-12 col-md-3 pb-3">`;
-						campaigns_html += `<img src="${val.image}" width="" height="" alt=""`+
-										`class="profile-sheet">`;
+						campaigns_html += `<a href="specificampaign.html">` +
+										`<img src="${val.image}" width="" height="" alt=""`+
+										`class="profile-sheet"></a>`;
 						campaigns_html +=`<strong class="profile-campaign-name">${val.name}</strong>`;
 						campaigns_html +=`<br>`;
 						campaigns_html +=`<span class="profile-campaign-lastplayed">${val.last_played}</span>`;
@@ -74,6 +75,8 @@
 					campaigns_html += `</div>`;
 
 					$('#campaigns-content').html(campaigns_html);
+
+					openPanel(event, 'Story');
 
 			});
 		});
@@ -131,10 +134,22 @@
 </nav>
 
 <div class="container-fluid" id="content">
-	<div class="row flex-column-reverse flex-md-row">
+	<div class="row h-100 flex-md-row-reverse">
 
+		<div class="col-12 col-md-2 h-md-100" id="character-sidebar">
+			<div class="row mb-3">
+				<div class="col-4 col-md-pull-8 col-md-12 my-3" style="text-align:center;">
+					<img src="" width="" height="" alt="" id="character-thumbnail" class="">
+				</div>
+				<div class="col-8 col-md-push-4 col-md-12 mt-3 mt-md-0 mb-md-3">
+					<h3 class="align-bottom" id="character-name"></h3>
+				</div>
+				<div class="mx-4" id="character-summary"></div>
+				<span id="campaign-insert"></span>	
+			</div>
+		</div>
 
-		<div class="col-md-10 py-5 px-5" id="character-content">
+		<div class="col-12 col-md-10 p-0 m-0 p-md-4" id="character-content">
 			<div class="tab">
 			  <button class="tablinks" onclick="openPanel(event, 'Story')">Story</button>
 			  <button class="tablinks" onclick="openPanel(event, 'Sheets')">Sheets</button>
@@ -201,16 +216,9 @@
 			</div>
 
 		</div>
-		<div class="col-md-2" id="character-sidebar">
-			<div class="py-3">
-				<h3 id="character-name"></h3>
-				<div class="py-4">
-					<img src="" width="" height="" alt="" id="character-thumbnail">
-				</div>
-				<div class="px-3" id="character-summary"></div>
-			</div>
-			<span id="campaign-insert"></span>
-		</div>
+
+
+	
 
 	</div>
 </div>
