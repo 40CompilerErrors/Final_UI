@@ -428,7 +428,7 @@ strong{
 }
 
 #specific-campaign-description{
-  padding: 1em;
+  /* padding: 1em; */
   background-color: rgba(0,0,0,0.65);
 }
 
@@ -462,4 +462,14 @@ strong{
 
 .dropdown-menu a{
   color: rgba(255,255,255,0.65);
+
+}
+
+
+#join-btn{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 2.5vh;
+  margin-bottom: 2.5vh;
 }
