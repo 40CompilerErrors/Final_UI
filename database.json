@@ -211,17 +211,20 @@
 		{
 			"name": "Curse of Stradh",
 			"image": "images/campaigns/curse_of_stradh.jpg",
-			"last_played": "04/01/2019"
+			"last_played": "04/01/2019",
+			"url": "specificampaign2.html"
 		},
 		{
 			"name": "Tomb of Horrors",
 			"image": "images/campaigns/tomb_of_horrors.jpg",
-			"last_played": "21/12/2018"
+			"last_played": "21/12/2018",
+			"url": "specificampaign3.html"
 		},
 		{
 			"name": "Downflow",
 			"image":"images/campaigns/downflow.jpg",
-			"last_played":"13/09/2015"
+			"last_played":"13/09/2015",
+			"url": "specificampaign4.html"
 		}
 	],
 

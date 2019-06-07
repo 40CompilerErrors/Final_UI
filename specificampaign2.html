@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Adventurer's Guild</title>
+
+
+	<script src="jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="database.json"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+	<script>
+    $(document).ready( ()=> {
+       $.getJSON("database.json", (data) => {
+
+            console.log(data.users[0].name); // this will show the info it in firebug console
+
+            $('#user-image').attr('src',data.users[0].picture);
+            $('#username').text(data.users[0].name);
+
+            var characters = ``;
+
+          $.each(data.roles, (key, val) => {
+            // characters += `<div class="row pb-2">`;
+            characters += `<h3 class="group-name pt-2"><strong>${val.group}</strong></h3>`;
+            // characters += `</div>`;
+            characters += `<div class="row">`
+            $.each(val.list, (i, val) => {
+
+              characters += `<div class="col-4">`;
+              characters += `<img src="${val.image}" class="character-image" />`;
+              characters += `<p class="character-name">${val.name}</p>`;
+              characters += `</div>`;
+
+            });
+
+            characters += `</div>`;
+
+        });
+
+				//spacer
+				//characters += `<div class="col-12" style="height:100%; min-height:5em;" />`;
+				//characters += `<div class="col-12 text-right">`;
+				characters += `<a href="chatroom.html" role="button" class="btn btn-primary" `;
+				characters += `aria-disabled="true">Join</a>`;
+			  characters += `</div>`;
+				//
+				// <button type="button" class="btn btn-primary center-block"
+				// 				onclick="sendMessage();">Send</button>
+        $('#player-menu-space').html(characters);
+
+    });
+    });
+	</script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #261F2F;">
+    <ul class="navbar-nav">
+  	  <li class="nav-item active">
+        <a class="navbar-brand" href="#">
+    	  <img src="" width="30" height="30" alt="" id="user-image">
+  		</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span id="username"></span><span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          Campaigns
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="mycampaigns.html">My Campaigns</a>
+          <a class="dropdown-item" href="campaigns.html">Search Campaigns</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Create Campaign</a>
+          <a class="dropdown-item" href="#">Join With Code</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">My Account</a>
+      </li>
+    </ul>
+</nav>
+
+<div class="container-fluid" id="content">
+  <div class="row">
+    <div class="col-md-9 pt-3 px-5" id="campaign-space">
+      <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-7 pt-3 px-5" id="specifc-campaign-data">
+            <h3>Curse of Stradh</h3>
+            <img src="images/campaigns/curse_of_stradh.jpg" height="auto" width="100%" id="campimage">
+            <p>Dungeons & Dragons (4th edition)</p>
+            <p>Thursdays at 10:00 PM (EST)</p>
+            <p>Last session on 13/5/2019</p>
+          </div>
+          <div class="col-md-5 pt-3  py-5">
+						<p id="specific-campaign-description">
+            Unravel the mysteries of Ravenloft® in this dread adventure for the world’s greatest roleplaying game. Under raging storm clouds, the vampire Count Strahd von Zarovich stands silhouetted against the ancient walls of Castle Ravenloft. Rumbling thunder pounds the castle spires. The wind’s howling increases as he turns his gaze down toward the village of Barovia. Far below, yet not beyond his keen eyesight, a party of adventurers has just entered his domain. Strahd’s face forms the barest hint of a smile as his dark plan unfolds. He knew they were coming, and he knows why they came; all according to his plan. A lightning flash rips through the darkness, but Strahd is gone. Only the howling of the wind fills the midnight air. The master of Castle Ravenloft is having guests for dinner—and you are invited.
+						</p>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-3" id="campaign-sidebar">
+       <div class="row px-3 py-2" id="player-menu-space">
+
+       </div>
+    </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
