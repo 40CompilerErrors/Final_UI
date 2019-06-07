@@ -20,7 +20,9 @@ body{
 h3{
   color: rgba(255,255,255,0.87);
 }
-
+h5{
+  color: rgba(255,255,255,0.87);
+}
 strong{
   color: rgba(255,255,255,0.87);
 	font-weight: 700;
@@ -219,6 +221,19 @@ strong{
   background-color: rgba(0,0,0,0.65);
 }
 
+/* CREATECAMPAIGN */
+.create-campaign{
+  background-color: rgba(0,0,0,0.65);
+}
+.create-block{
+  display: flex;
+  text-align: center;
+}
+
+#inp {
+  text-align: center;
+  margin: auto;
+}
 
 
 /* CHATROOM CSS */
