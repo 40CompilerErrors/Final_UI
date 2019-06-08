@@ -159,7 +159,7 @@ strong{
   object-fit: cover;
   object-position: 100% 0;
 
-  width: 20em;
+  width: 19em;
   height: 10.8em;
 }
 
@@ -453,6 +453,13 @@ strong{
 
 .campaign-slot{
   margin-bottom: 5vh;
+  width: 22em;
+}
+
+.campaign-container{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .dropdown-menu {
@@ -472,4 +479,9 @@ strong{
   right: 0;
   margin-right: 2.5vh;
   margin-bottom: 2.5vh;
+}
+
+.btn-text{
+  font-size: 0.95em;
+  max-width:25vw;
 }

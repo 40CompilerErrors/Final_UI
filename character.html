@@ -35,7 +35,7 @@
 					$('#character-summary').html(summary);
 
 					let images = ``;
-					images += `<div class="image-container">`;
+					images += `<div class="image-container justify-content-center justify-content-md-start">`;
 					$.each(data.detailed_character[0].images, (key, val) => {
 							images += `<span class="m-3" style="text-align:center;">`;
 							images += `<img src="${val.source}" width="" height="" alt=""`+
@@ -145,16 +145,20 @@
 					<h3 class="align-bottom" id="character-name"></h3>
 				</div>
 				<div class="mx-4" id="character-summary"></div>
-				<span id="campaign-insert"></span>	
+				<span id="campaign-insert"></span>
 			</div>
 		</div>
 
 		<div class="col-12 col-md-10 p-0 m-0 p-md-4" id="character-content">
 			<div class="tab">
-			  <button class="tablinks" onclick="openPanel(event, 'Story')">Story</button>
-			  <button class="tablinks" onclick="openPanel(event, 'Sheets')">Sheets</button>
-			  <button class="tablinks" onclick="openPanel(event, 'Images')">Images</button>
-				<button class="tablinks" onclick="openPanel(event, 'Campaigns')">Campaigns</button>
+			  <button class="tablinks" onclick="openPanel(event, 'Story')">
+					<span class="btn-text">Story</span></button>
+			  <button class="tablinks" onclick="openPanel(event, 'Sheets')">
+					<span class="btn-text">Sheets</span></button>
+			  <button class="tablinks" onclick="openPanel(event, 'Images')">
+					<span class="btn-text">Images</span></button>
+				<button class="tablinks" onclick="openPanel(event, 'Campaigns')">
+					<span class="btn-text">Campaigns</span></button>
 			</div>
 
 			<div id="Story" class="tabcontent">
@@ -218,7 +222,7 @@
 		</div>
 
 
-	
+
 
 	</div>
 </div>

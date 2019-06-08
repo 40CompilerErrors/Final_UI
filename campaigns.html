@@ -24,10 +24,10 @@
           $('#username').text(data.users[0].name);
 
           var mycampaigns = ``;
-
+					mycampaigns += `<div class="row campaign-container justify-content-center justify-content-md-start">`;
           $.each(data.public_campaigns, (key,val) => {
 
-            mycampaigns += `<div class="col-md-3 px-2 campaign-slot">`;
+            mycampaigns += `<span class="px-2 campaign-slot">`;
 						if(val.name =="Rise of the Runelords"){
 							mycampaigns += `<a href="specificampaign.html"><img  src="${val.image}" class="campaign-image"/> </a>`;
 						}
@@ -36,8 +36,9 @@
 						}
             mycampaigns += `<p>${val.name}</p>`;
             mycampaigns += `<p>${val.system}</p>`;
-            mycampaigns += `</div>`;
+            mycampaigns += `</span>`;
           });
+					mycampaigns += `</div>`;
           $('#campaign-space').html(mycampaigns);
 
           //wirte your code here
