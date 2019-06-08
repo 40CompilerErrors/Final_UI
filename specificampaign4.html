@@ -43,12 +43,6 @@
 
         });
 
-				//spacer
-				characters += `<div class="col-12" style="height:100%; min-height:5em;" />`;
-				characters += `<div class="col-12 text-right">`;
-				characters += `<a href="chatroom.html" role="button" class="btn btn-primary" `;
-				characters += `aria-disabled="true">Join</a>`;
-			  characters += `</div>`;
 				//
 				// <button type="button" class="btn btn-primary center-block"
 				// 				onclick="sendMessage();">Send</button>
@@ -97,18 +91,18 @@
 
 <div class="container-fluid" id="content">
   <div class="row">
-    <div class="col-md-9 pt-3 px-5" id="campaign-space">
+    <div class="col-md-9 pt-3 px-0 px-md-5" id="campaign-space">
       <div class="container-fluid">
       <div class="row">
-          <div class="col-md-7 pt-3 px-5" id="specifc-campaign-data">
+          <div class="col-md-7 py-3 px-3 px-md-5" id="specifc-campaign-data">
             <h3>Downflow</h3>
             <img src="images/campaigns/downflow.jpg" height="auto" width="100%" id="campimage">
             <p>Dungeons & Dragons (5th edition)</p>
             <p>Wednesdays at 9:00 PM (WEST)</p>
             <p>Last session on 4/06/2019</p>
           </div>
-          <div class="col-md-5 pt-3  py-5">
-						<p id="specific-campaign-description">
+          <div class="col-md-5 px-0 py-0 py-md-5">
+						<p id="specific-campaign-description" class="p-3 m-0">
             The busy harbor is protected by enormous gated sea walls above the surface and by a cadre of merfolk beneath it. It is known all over the world as the safest of harbors, with the finest repair facilities for ships across Faerûn and with everything a merchant captain needs—from storehouses and marketplaces to myriad inns, festhalls, and taverns for the entertainment of the crew.
 						</p>
           </div>
@@ -119,10 +113,11 @@
        <div class="row px-3 py-2" id="player-menu-space">
 
        </div>
+			 <a href="chatroom.html" role="button" class="btn btn-primary" id="join-btn"
+					aria-disabled="true">Join</a>
     </div>
 
-
-    </div>
+  </div>
 </div>
 
 </body>

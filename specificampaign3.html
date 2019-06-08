@@ -43,12 +43,6 @@
 
         });
 
-				//spacer
-				characters += `<div class="col-12" style="height:100%; min-height:5em;" />`;
-				characters += `<div class="col-12 text-right">`;
-				characters += `<a href="chatroom.html" role="button" class="btn btn-primary" `;
-				characters += `aria-disabled="true">Join</a>`;
-			  characters += `</div>`;
 				//
 				// <button type="button" class="btn btn-primary center-block"
 				// 				onclick="sendMessage();">Send</button>
@@ -97,18 +91,18 @@
 
 <div class="container-fluid" id="content">
   <div class="row">
-    <div class="col-md-9 pt-3 px-5" id="campaign-space">
+    <div class="col-md-9 pt-3 px-0 px-md-5" id="campaign-space">
       <div class="container-fluid">
       <div class="row">
-          <div class="col-md-7 pt-3 px-5" id="specifc-campaign-data">
+          <div class="col-md-7 py-3 px-3 px-md-5" id="specifc-campaign-data">
             <h3>Tomb of Horrors</h3>
             <img src="images/campaigns/tomb_of_horrors.jpg" height="auto" width="100%" id="campimage">
             <p>Dungeons & Dragons (3th edition)</p>
             <p>Saturdays at 4:00 PM (EST)</p>
             <p>Last session on 23/3/2019</p>
           </div>
-          <div class="col-md-5 pt-3  py-5">
-						<p id="specific-campaign-description">
+          <div class="col-md-5 px-0 py-0 py-md-5">
+						<p id="specific-campaign-description" class="p-3 m-0">
             In an isolated corner of one of the world’s fallen kingdoms lies the last crypt and redoubt of the demilich Acererak. For countless generations, this legendary Tomb of Horrors has attracted the avaricious and the noble, as well as the foolish and the brave, with legends of great wealth and even greater evil to be undone. Now a new generation of heroes stands ready to delve into the tomb’s deadly madness - or to be destroyed like those who came before them.
 						</p>
           </div>
@@ -119,10 +113,11 @@
        <div class="row px-3 py-2" id="player-menu-space">
 
        </div>
+			 <a href="chatroom.html" role="button" class="btn btn-primary" id="join-btn"
+					aria-disabled="true">Join</a>
     </div>
 
-
-    </div>
+  </div>
 </div>
 
 </body>
