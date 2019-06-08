@@ -34,7 +34,7 @@ strong{
 }
 
 .navbar{
-	height: 10% !important;
+	height: 8vh;
   max-height:8vh;
 }
 
@@ -262,7 +262,7 @@ strong{
 #room-title{
   color: rgba(255,255,255,0.87);
   background-color: rgba(60,48,76,1);
-  height:7.5%;
+  max-height:7.5vh;
 }
 
 #room-description{
@@ -278,20 +278,22 @@ strong{
 
 #chat{
   min-height: 80%;
-  max-height: 20vh;
+  max-height: 72vh;
   background-image: url(images/resources/chatroom-background.png);
   overflow-y: scroll;
 }
 
 #chat-box{
     background-color: #261F2F;
-    height: 12.5%;
+    height: 12.5vh;
+    max-height: 12.5vh;
 }
 
 #room-name{
   padding-top:0.5em;
   font-size: calc(0.8em + (1vw));
 }
+
 
 #rooms{
   color: rgba(255,255,255,0.87);
@@ -313,12 +315,15 @@ strong{
 
 #chat-character{
   max-height:100%;
+
 }
 
 #chat-character img{
-  margin-top:12%;
-  height:88%;
-  width:auto;
+  height: 8vh;
+  width: 8vh;
+  max-height: 10vh;
+  max-width: 10vh;
+
 }
 
 #character-selector{
@@ -383,7 +388,6 @@ strong{
 }
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    margin-top:40%;
     background-color: #ab47dd;
     font-size: 1.2em;
     font-weidth: 700;

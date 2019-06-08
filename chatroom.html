@@ -129,17 +129,17 @@
       let message = ``;
       for (i = 0; i < number; i++) {
         message += `<div class="row chat-message py-2">`;
-        message += `<div class="col-1 py-2">`;
+        message += `<div class="col-3 col-md-1 py-2">`;
         message += `<p class="chat-date">8/5/19</p>`;
         message += `<p class="chat-date">10:31PM</p>`;
         message += `</div>`;
-        message += `<div class="col-1">`;
+        message += `<div class="col-3 col-md-1">`;
         message += `<img src="images/characters/example.png" alt="" class="chat-image">`;
         message += `</div>`;
-        message += `<div class="col-1 character-name">`;
+        message += `<div class="col-4 col-md-1 character-name">`;
         message += `<p>Example Character</p>`;
         message += `</div>`;
-        message += `<div class="col-9 chat-text">`;
+        message += `<div class="col-12 col-md-9 chat-text">`;
         message += `<p>0-level spell action balance domain blinded charm domain class`+
               `feature class level death attack direct a spell dispel check` +
               `entangled failure fire domain fortitude save fraction initiative` +
@@ -163,22 +163,26 @@
 
       message = ``;
       message += `<div class="row chat-message py-2">`;
-      message += `<div class="col-1 py-2">`;
+      message += `<div class="col-3 col-md-1 py-2">`;
       message += `<p class="chat-date">8/5/19</p>`;
       message += `<p class="chat-date">10:31PM</p>`;
       message += `</div>`;
-      message += `<div class="col-1">`;
+      message += `<div class="col-3 col-md-1">`;
       message += `<img src="images/characters/alabaster_miller.png" alt="" class="chat-image">`;
       message += `</div>`;
-      message += `<div class="col-1 character-name">`;
+      message += `<div class="col-4 col-md-1 character-name">`;
       message += `<p>Alabaster Miller</p>`;
       message += `</div>`;
-      message += `<div class="col-9 chat-text">`;
+      message += `<div class="col-12 col-md-9 chat-text">`;
       message += `<p>${text}</p>`;
       message += `</div>`;
       message += `</div>`;
 
-      if (current_room == "tavern"){
+
+      if (text == ""){
+				//Do nothings
+			}
+      else if (current_room == "tavern"){
         tavern_messages[tavern_messages.length] = message;
         changeRoom(event,'tavern');
       }
@@ -247,9 +251,9 @@
 	</nav>
 
 <div class="container-fluid" id="content">
-	<div class="row h-100">
+	<div class="row flex-row h-100">
 
-    <div class="col-12 col-md-8" style="padding:0 !important;">
+    <div class="col-12 col-md-8" style="padding:0 !important; max-height:92vh;">
       <div class="container-fluid"  id="chat-space">
         <div class="pl-1 pl-md-3 row" id="room-title">
 					<div class="col-3 col-md-2">
@@ -270,18 +274,19 @@
 
 
         <div class="row" id="chat-box">
-          <div class="col-1" id="character-selector">
+          <!-- <div class="col-1" id="character-selector">
             <img src="images/resources/angle-arrow-down.svg" alt="">
+          </div> -->
+          <div class="col-2 col-md-1 d-flex justify-content-center pl-4" id="chat-character">
+            <img src="images/characters/alabaster_miller.png" alt=""
+								 class="align-self-center">
           </div>
-          <div class="col-1" id="chat-character">
-            <img src="images/characters/alabaster_miller.png" alt="">
-          </div>
-          <div class="col-9">
+          <div class="col-8 col-md-10">
             <textarea id="player-input" rows="" cols=""
                       name="new-message"></textarea>
           </div>
-          <div class="col-1">
-            <button type="button" class="btn btn-primary center-block"
+          <div class="col-2 col-md-1 d-flex justify-content-center pr-4">
+            <button type="button" class="btn btn-primary align-self-center"
                     onclick="sendMessage();">Send</button>
           </div>
         </div>
