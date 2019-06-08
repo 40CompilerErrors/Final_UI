@@ -38,8 +38,9 @@
 					images += `<div class="image-container justify-content-center justify-content-md-start">`;
 					$.each(data.detailed_character[0].images, (key, val) => {
 							images += `<span class="m-3" style="text-align:center;">`;
-							images += `<img src="${val.source}" width="" height="" alt=""`+
-												`class="profile-image">`;
+							images += `<a href="${val.source}">` +
+ 												`<img src="${val.source}" width="" height="" alt=""`+
+												`class="profile-image"></a>`;
 							images +=`<h4>${val.description}</h4>`;
 							images += `</span>`;
 					});
@@ -218,6 +219,7 @@
 				<div class="p-3" id="images-content">
 
 				</div>
+
 			</div>
 
 			<div id="Campaigns" class="tabcontent">
@@ -227,8 +229,6 @@
 			</div>
 
 		</div>
-
-
 
 
 	</div>
