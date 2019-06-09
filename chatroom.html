@@ -23,6 +23,7 @@
 
     $(document).ready( ()=> {
 
+
       $.getJSON("database.json", (data) => {
 
           console.log(data.users[0].name); // this will show the info it in firebug console
@@ -205,6 +206,15 @@
       $("#chat-log").scrollTop = $("#chat-log").scrollHeight;
     }
 
+
+		document.onkeypress = function (e) {
+				e = e || window.event;
+				if (e.keyCode === 13) {
+					sendMessage();
+				}
+		};
+
+
 	</script>
 </head>
 <body>
@@ -249,9 +259,9 @@
 	</nav>
 
 <div class="container-fluid" id="content">
-	<div class="row flex-row h-100">
+	<div class="row flex-row" style="min-height:92vh;">
 
-    <div class="col-12 col-md-8" style="padding:0 !important; max-height:92vh;">
+    <div class="col-12 col-md-8" style="padding:0 !important; max-height:92vh; min-height:92vh;">
       <div class="container-fluid"  id="chat-space">
         <div class="pl-1 pl-md-3 row" id="room-title">
 					<div class="col-3 col-md-2">
@@ -284,7 +294,7 @@
                       name="new-message"></textarea>
           </div>
           <div class="col-2 col-md-1 d-flex justify-content-center pr-4">
-            <button type="button" class="btn btn-primary align-self-center"
+            <button type="button" class="btn btn-primary align-self-center" id="send-btn"
                     onclick="sendMessage();">Send</button>
           </div>
         </div>
@@ -301,10 +311,10 @@
     <div class="col-6 col-md-2" id="rooms">
       <h3>Rooms</h3><br>
       <ul id="roomlist">
-         <li class="room active-room" onclick="changeRoom(event,'tavern')">Tavern</li>
-         <li class="room" onclick="changeRoom(event,'world-map')">World Map</li>
-         <li class="room" onclick="changeRoom(event,'dungeon')">Dungeon</li>
-         <li class="room" onclick="changeRoom(event,'fortress')">Fortress</li>
+         <li class="disable-select room active-room" onclick="changeRoom(event,'tavern')">Tavern</li>
+         <li class="disable-select room" onclick="changeRoom(event,'world-map')">World Map</li>
+         <li class="disable-select room" onclick="changeRoom(event,'dungeon')">Dungeon</li>
+         <li class="disable-select room" onclick="changeRoom(event,'fortress')">Fortress</li>
       </ul>
     </div>
 

@@ -97,11 +97,11 @@
 						onsubmit="alert('Campaign created successfully!');">
         <div class="p-1 create-campaign">
             <div class="row create-block m-4">
-              <h5 class="col-md-2 mt-2 pr-2">Name: </h5>
+              <h5 class="col-md-2 mt-2 pr-2">Name<span class="required">*</span>: </h5>
               <input class="col-md-4 form-control mt-1" name="" required >
             <!-- </div>
             <div class="row create-block m-4"> -->
-              <h5 class="col-md-2 mt-2 pr-2 ">Edition: </h5>
+              <h5 class="col-md-2 mt-2 pr-2 ">Game<span class="required">*</span>: </h5>
               <select class="form-control col-md-4" required>
                 <option>Dungeons & Dragons (5th Edition)</option>
                 <option>Dungeons & Dragons (3.5th Edition)</option>
@@ -114,9 +114,11 @@
               </select>
             </div>
             <div class="row m-4">
-              <h5 class="col-12 col-md-2 mt-2 pr-2">Timetable: </h5>
+              <h5 class="col-12 col-md-2 mt-2 pr-2">Timetable<span class="required">*</span>: </h5>
               <!-- <input class="col-md-10 form-control mt-1" name="" required> -->
-							<input class="col-5 col-md-2" type="time" value="19:30" name="appt" required>
+							<div class="col-5 col-md-2 pl-0">
+									<input class="form-control" type="time" value="19:30" name="appt" required>
+							</div>
 							<div class="col-2 col-md-1"></div>
 							<select class="form-control col-5 col-md-7" required>
 								<option>Monday</option>
@@ -129,12 +131,12 @@
 							</select>
 						</div>
             <div class="row create-block m-4">
-              <h5 class="col-md-2 mt-2 pr-2">Description: </h5>
+              <h5 class="col-md-2 mt-2 pr-2">Description<span class="required">*</span>	: </h5>
               <textarea style="resize:none" class="col-md-10 form-control" rows="5" cols="80"
 							required></textarea>
             </div>
             <div class="row create-block ml-4 pb-3 mr-2">
-              <h5 class="col-md-2 mt-2 pr-2">Select a picture: </h5>
+              <h5 class="col-md-2 mt-2 pr-2">Select a picture<span class="required">*</span>: </h5>
               <!-- <input type="file" id="selectedFile" class="form-control-file" required style="display: none;"> -->
               <div class="col-md-10 mt-1 pl-0">
 								  <div class="custom-file">
@@ -145,6 +147,7 @@
 								  </div>
 								</div>
             </div>
+
             <div class="row create-block pt-3 pb-2 d-flex justify-content-end">
                 <button type="submit" class="btn btn-default mr-4" >Submit</button>
             </div>
