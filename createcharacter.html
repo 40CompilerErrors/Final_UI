@@ -27,6 +27,13 @@
           //wirte your code here
 
       });
+
+			$('input[type="file"]').change(function(e){
+
+					var fileName = e.target.files[0].name;
+					$('#selected-camp-file').text(fileName);
+			});
+
     });
 	</script>
 
@@ -82,7 +89,7 @@
       <form id="createcampaignform" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
             data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
             data-bv-feedbackicons-validating="glyphicon glyphicon-refresh"
-						onsubmit="alert('Campaign created successfully!');">
+						onsubmit="alert('Character created successfully!');">
         <div class="create-campaign p-1">
 					<div class="row create-block m-4">
 						<h5 class="col-md-2 mt-2 pr-2">Name<span class="required">*</span>: </h5>

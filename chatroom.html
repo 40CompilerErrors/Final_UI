@@ -29,16 +29,16 @@
           console.log(data.users[0].name); // this will show the info it in firebug console
           $('#user-image').attr('src',data.users[0].picture);
           $('#username').text(data.users[0].name);
-
-
+					
       });
-
 
       current_room = "tavern";
       loadCharactersInRoom(3);
       tavern_messages.forEach(function(message){
         $('#chat-log').append(message);
       });
+
+			alert("You've joined the campaign. Say hi in the chatroom!");
     });
 
     function changeRoom(evt,name) {
