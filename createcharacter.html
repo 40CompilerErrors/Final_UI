@@ -77,38 +77,47 @@
 <div class="container-fluid" id="content">
 	<div class="row">
     <div class="col-md-2"></div>
-    <div class="col-md-7">
+    <div class="col-md-7 p-0">
 
       <h3 class="mt-3">Create a character</h3>
       <h5 class="mt-1 ml-3">Fill in the attribute's fields below:</h4>
       <form id="createcampaignform" data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
             data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
-            data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
-        <div class="ml-3 create-campaign">
-            <div class="row create-block m-4">
-              <h5 class="col-md-4 mt-2 pr-2">Name: </h5>
-              <input class="col-md-8 form-control mt-1" name="" required >
-            </div>
+            data-bv-feedbackicons-validating="glyphicon glyphicon-refresh"
+						onsubmit="alert('Campaign created successfully!');">
+        <div class="create-campaign p-1">
+					<div class="row create-block m-4">
+						<h5 class="col-md-2 mt-2 pr-2">Name: </h5>
+						<input class="col-md-4 form-control mt-1" name="" required >
+					<!-- </div>
+					<div class="row create-block m-4"> -->
+						<h5 class="col-md-2 mt-2 pr-2 ">Group: </h5>
+						<select class="form-control col-md-4" required>
+							<option>Dungeons & Dragons</option>
+							<option>Shadowrun</option>
+						</select>
+					</div>
 
 
-            <div class="row create-block m-4">
-              <h5 class="col-md-4 mt-2 pr-2">Description: </h5>
-              <textarea style="resize:none" class="col-md-8 form-control" rows="5" cols="80" required>
-              </textarea>
-            </div>
-            <div class="row create-block ml-4 pb-3 mr-2">
-              <h5 class="col-md-4 mt-2 pr-2">Select a picture: </h5>
-              <input type="file" id="selectedFile" class="form-control-file" required style="display: none;">
-              <div class="col-md-8 mt-1">
-              <input type="button" class="form-control " value="Browse..." onclick="document.getElementById('selectedFile').click();" />
-              </div>
-            </div>
-            <div class="row create-block pt-3 pb-2">
-              <div class=" col-md-3"></div>
-              <div class=" col-md-6">
-                <button type="submit" class="btn btn-default" >Submit</button>
-              </div>
-
+						<div class="row create-block m-4">
+							<h5 class="col-md-2 mt-2 pr-2">Story: </h5>
+							<textarea style="resize:none" class="col-md-10 form-control" rows="5" cols="80"
+							required></textarea>
+						</div>
+						<div class="row create-block ml-4 pb-3 mr-2">
+							<h5 class="col-md-2 mt-2 pr-2">Select a picture: </h5>
+							<!-- <input type="file" id="selectedFile" class="form-control-file" required style="display: none;"> -->
+							<div class="col-md-10 mt-1 pl-0">
+									<div class="custom-file">
+										<input type="file" class="custom-file-input h-100" id="inputGroupFile01"
+											aria-describedby="inputGroupFileAddon01" required>
+										<label class="custom-file-label" for="inputGroupFile01">
+											<span id="selected-camp-file">Choose a picture</span></label>
+									</div>
+								</div>
+						</div>
+						<div class="row create-block pt-3 pb-2 d-flex justify-content-end">
+                <button type="submit" class="btn btn-default mr-4" >Submit</button>
             </div>
 
         </form>
