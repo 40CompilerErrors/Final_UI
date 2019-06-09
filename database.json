@@ -147,37 +147,44 @@
 		{
 			"name": "Rise of the Runelords",
 			"image":"images/campaigns/rise_of_the_runelords.jpg",
-			"system":"Dungeons & Dragons (5e)"
+			"system":"Dungeons & Dragons (5e)",
+			"url":"specificampaign.html"
+		},
+		{
+			"name": "Curse Of Stradh",
+			"image":"images/campaigns/curse_of_stradh.jpg",
+			"system":"Dungeons & Dragons (4th edition)",
+			"url":"specificampaign2.html"
+		},
+		{
+			"name": "Tomb of Horrors",
+			"image":"images/campaigns/tomb_of_horrors.jpg",
+			"system":"Dungeons & Dragons (3th edition)",
+			"url":"specificampaign3.html"
+		},
+		{
+			"name": "Downflow",
+			"image":"images/campaigns/downflow.jpg",
+			"system":"Dungeons & Dragons (5th edition)",
+			"url":"specificampaign4.html"
 		},
 		{
 			"name": "Example",
 			"image":"images/campaigns/example.jpg",
-			"system":"Pathfinder"
+			"system":"Pathfinder",
+			"url":"specificampaign5.html"
 		},
 		{
 			"name": "Example",
 			"image":"images/campaigns/example.jpg",
-			"system":"Pathfinder"
+			"system":"Pathfinder",
+			"url":"specificampaign5.html"
 		},
 		{
 			"name": "Example",
 			"image":"images/campaigns/example.jpg",
-			"system":"Pathfinder"
-		},
-		{
-			"name": "Example",
-			"image":"images/campaigns/example.jpg",
-			"system":"Pathfinder"
-		},
-		{
-			"name": "Example",
-			"image":"images/campaigns/example.jpg",
-			"system":"Pathfinder"
-		},
-		{
-			"name": "Example",
-			"image":"images/campaigns/example.jpg",
-			"system":"Pathfinder"
+			"system":"Pathfinder",
+			"url":"specificampaign5.html"
 		}
 	],
 

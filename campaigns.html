@@ -28,12 +28,7 @@
           $.each(data.public_campaigns, (key,val) => {
 
             mycampaigns += `<span class="px-2 campaign-slot">`;
-						if(val.name =="Rise of the Runelords"){
-							mycampaigns += `<a href="specificampaign.html"><img  src="${val.image}" class="campaign-image"/> </a>`;
-						}
-						else{
-							mycampaigns += `<img  src="${val.image}" class="campaign-image"/>`;
-						}
+            mycampaigns += `<a href="${val.url}"><img  src="${val.image}" class="campaign-image"/> </a>`;
             mycampaigns += `<p>${val.name}</p>`;
             mycampaigns += `<p>${val.system}</p>`;
             mycampaigns += `</span>`;
@@ -59,12 +54,12 @@
 		<div class="collapse navbar-collapse px-2 px-md-0" id="navbarSupportedContent">
 			<ul class="navbar-nav">
 	  	  <li class="nav-item active">
-	        <a class="navbar-brand" href="#">
-	    	  <img src="" width="30" height="30" alt="" id="user-image">
+	        <a class="navbar-brand" href="index.html">
+	    	  <img href="index.html" src="" width="30" height="30" alt="" id="user-image">
 	  		</a>
 	      </li>
 	      <li class="nav-item active">
-	        <a class="nav-link" href="#"><span id="username"></span><span class="sr-only">(current)</span></a>
+	        <a class="nav-link" href="index.html"><span id="username"></span><span class="sr-only">(current)</span></a>
 	      </li>
 	    </ul>
 	    <ul class="navbar-nav ml-auto">
@@ -85,7 +80,7 @@
 	        </div>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Help</a>
+	        <a class="nav-link" href="help.html">Help</a>
 	      </li>
 	    </ul>
 		</div>
