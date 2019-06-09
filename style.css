@@ -488,6 +488,14 @@ strong{
   margin-bottom: 2.5vh;
 }
 
+#new-char-btn{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 2.5vh;
+  margin-bottom: 2.5vh;
+}
+
 .btn-text{
   font-size: 0.95em;
   max-width:25vw;
