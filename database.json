@@ -192,12 +192,14 @@
 		{
 			"name": "Curse of Stradh",
 			"image":"images/campaigns/curse_of_stradh.jpg",
-			"system":"Dungeons & Dragons (5e)"
+			"system":"Dungeons & Dragons (5e)",
+			"url":"specificampaign2.html"
 		},
 		{
 			"name": "Downflow",
 			"image":"images/campaigns/downflow.jpg",
-			"system":"Pathfinder"
+			"system":"Pathfinder",
+			"url":"specificampaign4.html"
 		}
 	],
 

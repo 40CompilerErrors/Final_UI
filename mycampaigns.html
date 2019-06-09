@@ -28,7 +28,9 @@
           $.each(data.my_campaigns, (key,val) => {
 
             mycampaigns += `<div class="col-md-3 px-2 campaign-slot">`;
+						mycampaigns += `<a href="${val.url}">`
             mycampaigns += `<img  src="${val.image}" class="campaign-image"/>`;
+						mycampaigns += `</a>`
 						mycampaigns += `<div class="row">`;
 						mycampaigns += `<div class="col-6">`;
             mycampaigns += `<p class="character-name">${val.name}</p>`;

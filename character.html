@@ -52,8 +52,8 @@
 					sheet += `<div class="row">`;
 					$.each(data.detailed_character[0].sheets, (key, val) => {
 						sheet += `<div class="col-12 col-md-3 pb-3">`;
-						sheet += `<img src="${val.source}" width="" height="" alt=""`+
-											`class="profile-sheet">`;
+						sheet += `<a href="images/characters/alabaster_DnD_sheet.pdf"><img src="${val.source}" width="" height="" alt=""`+
+											`class="profile-sheet"></a>`;
 						sheet +=`<h4>${val.description}</h4>`;
 						sheet += `</div>`;
 					});
